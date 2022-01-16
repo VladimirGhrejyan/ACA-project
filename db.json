@@ -1,10 +1,13 @@
 {
-    "users": [
-        {
-            "name": "Alex"
-        },
-        {
-            "name": "Nick"
-        }
-    ]
+  "users": [
+    {
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "nickname": "aaa",
+      "email": "aaa",
+      "password": "aaa",
+      "gender": "male",
+      "id": 1
+    }
+  ]
 }
