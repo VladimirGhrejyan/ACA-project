@@ -1,6 +1,6 @@
 import "./style.css"
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -45,10 +45,10 @@ function SignIn(){
             onClick={handleSubmit}>Log In</button>
         </div>
         <br/>
-          <Link to="/registor">
+          <NavLink to="/registor">
            <button className="Cr" 
            >Create new account</button>
-           </Link>
+           </NavLink>
         </>
       
     ) 
