@@ -7,9 +7,7 @@ function Layout() {
     return (
     <>
         <div className='container'>
-            <div className='header1 item'>
-                <Header />
-            </div>
+            <Header />
 
             <div className='nav1 item'>
                     <NavLink to="/">Home </NavLink>

@@ -5,6 +5,7 @@
         'nav1 main1'
         'footer1 footer1';
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 150px;
 }
 
 .header1 {

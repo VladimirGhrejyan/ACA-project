@@ -6,53 +6,53 @@ import { makeStyles } from '@mui/styles'
 import {NavLink} from 'react-router-dom';
 
 function Header() {
-    const useStyles = makeStyles((theme) => (
-        {
-            root: {
-                flexGrow: 1
-            },
-            menuButton: {
-                marginRight: theme.spacing(1)
-            },
-            title: {
-                flexGrow: 1
-            }
+    const useStyles = makeStyles({
+        root: {
+            display: 'grid'
+        },
+        appbar: {
+            height: '150px'
+        },
+        button1: {
+            height: '100px',
+            marginRight: '50%'
+        },
+        container: {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr'
         }
-    ) 
-    )
+
+    })
 
     const classes = useStyles();
     return (
 
         <div className='header1'>
-
-                <AppBar position="static">
-                    <Container fixed>
-                        <Toolbar>
-                            <IconButton
-                            edge="start" color="inherit" aria-laabel="menu" className={classes.menuButton}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography
-                            variant="h6" className={classes.title} 
-                            >
-                                Our Project
-                            </Typography>
-                            <Box
-                            mr={3}
-                            >
-                                <Button
-                                color="inherit" variant="outlined"
-                                >
-                                    <NavLink to="/signin">Sign In </NavLink>
-                                </Button>
-                            </Box>
-                        </Toolbar>
+                <AppBar className={classes.appbar} position="static">
+                    <Container className={classes.container} fixed>
+                    <IconButton
+                    edge="start" color="inherit" aria-label="menu"
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography
+                    variant="h6"
+                    >
+                        Our Project
+                    </Typography>
+                    <Box 
+                    mr={3} 
+                    >
+                        <Button 
+                        color="inherit" variant="outlined" 
+                        >
+                            <NavLink to="/signin">Sign In </NavLink>
+                        </Button>
+                    </Box>
                     </Container>
                 </AppBar>
-
         </div>
+        
     )
 }
 
