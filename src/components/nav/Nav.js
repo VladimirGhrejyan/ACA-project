@@ -4,12 +4,12 @@ import styles from './navStyles'
 import {useNavigate} from 'react-router-dom'
 
 function Nav() {
-    const {container} = styles;
+    const {container, appbar} = styles;
     const navigate = useNavigate();
 
     return (
         <Box>
-            <AppBar position='static' sx={ {height: '900px'} }>
+            <AppBar position='static' sx={ appbar }>
                 <Box sx={container}>
                         <Button color="inherit" variant="text" size="large"
                         onClick={ () => { navigate("/") } }

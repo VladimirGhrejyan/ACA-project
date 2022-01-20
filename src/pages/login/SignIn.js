@@ -24,7 +24,7 @@ function SignIn(){
     return (
       <>
       <div className="window">
-         <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"/>
+         <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" id="img"/>
          <h2 id="wm">Welcome to Maket</h2>
             <input type="text" 
             placeholder=" Your nicknameName..." 
@@ -38,17 +38,18 @@ function SignIn(){
             onChange={e=>setPassword(e.target.value)}
             />
         <br/>
-        </div>
         
-        <div>
+        
+        
          <button type="submit" className="logIN"
             onClick={handleSubmit}>Log In</button>
-        </div>
+        
         <br/>
           <NavLink to="/registor">
            <button className="Cr" 
            >Create new account</button>
            </NavLink>
+      </div>
         </>
       
     ) 
