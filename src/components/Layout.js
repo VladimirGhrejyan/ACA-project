@@ -2,6 +2,7 @@ import React from 'react'
 import {NavLink, Outlet} from 'react-router-dom'
 import "./layout.css"
 import Header from './header/Header'
+import Nav from './nav/Nav'
 import {Box} from '@mui/material'
 import styles from './LayoutStyles'
 
@@ -16,11 +17,7 @@ function Layout() {
             <Header />
         </Box>
         <Box sx={nav}>
-            <NavLink to="/">Home </NavLink>
-            <NavLink to="/blog">Blog </NavLink>
-            <NavLink to="/about">About </NavLink>
-            <NavLink to="/userslist">Users </NavLink>
-            <NavLink to="/signin">Sign In </NavLink>
+            <Nav />
         </Box>
         <Box sx={main}>
             I am main

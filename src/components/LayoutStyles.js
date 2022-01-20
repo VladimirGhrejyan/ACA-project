@@ -12,10 +12,12 @@ const styles = {
         height: '70px'
     },
     nav: {
-        gridArea: 'nav'
+        gridArea: 'nav',
+        height: '900px'
     },
     main: {
-        gridArea: 'main'
+        gridArea: 'main',
+        height: '900px'
     },
     footer: {
         gridArea: 'footer'
