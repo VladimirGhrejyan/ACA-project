@@ -1,31 +1,35 @@
 import React from 'react'
 import {NavLink, Outlet} from 'react-router-dom'
 import "./layout.css"
-import Header from './Header'
+import Header from './header/Header'
+import {Box} from '@mui/material'
+import styles from './LayoutStyles'
 
 function Layout() {
+    const {container, header, nav, main, footer} = styles;
+    
     return (
     <>
-        <div className='container'>
+    <Box sx={ container }
+    >
+        <Box sx={header}>
             <Header />
-
-            <div className='nav1 item'>
-                    <NavLink to="/">Home </NavLink>
-                    <NavLink to="/blog">Blog </NavLink>
-                    <NavLink to="/about">About </NavLink>
-                    <NavLink to="/userslist">Users </NavLink>
-                    <NavLink to="/signin">Sign In </NavLink>
-            </div>
-
-            <div className='main1 item'>
-                I am main
-                <Outlet />
-            </div>
-
-            <div className='footer1 item'>
-                2021
-            </div>
-        </div>
+        </Box>
+        <Box sx={nav}>
+            <NavLink to="/">Home </NavLink>
+            <NavLink to="/blog">Blog </NavLink>
+            <NavLink to="/about">About </NavLink>
+            <NavLink to="/userslist">Users </NavLink>
+            <NavLink to="/signin">Sign In </NavLink>
+        </Box>
+        <Box sx={main}>
+            I am main
+            <Outlet />
+        </Box>
+        <Box sx={footer}>
+            2021
+        </Box>
+    </Box>
     </>
     )
 }
