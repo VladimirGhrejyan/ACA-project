@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink, Outlet} from 'react-router-dom'
+import {Outlet} from 'react-router-dom'
 import "./layout.css"
 import Header from './header/Header'
 import Nav from './nav/Nav'

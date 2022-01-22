@@ -1,12 +1,18 @@
-import React from 'react'
-import { AppBar, Box, IconButton, Typography, Button } from "@mui/material"
+import React from 'react';
+import { AppBar, Box, IconButton, Typography, Button } from "@mui/material";
 import {useNavigate} from 'react-router-dom';
-import icon from './icons/icon.png'
-import styles from './headerStyles'
+import icon from './icons/icon.png';
+import styles from './headerStyles';
+import { useAuth } from '../../hook/useAuth';
 
 function Header() {
     const {container, buttons} = styles;
     const navigate = useNavigate();
+    const {signout} = useAuth();
+    
+    const handleLogOut = () => {
+        signout( () => navigate("/login") )
+    }
 
     return (
 
@@ -40,7 +46,7 @@ function Header() {
                                 My Profile
                             </Button>
                             
-                            <Button onClick={ () => {navigate("/signin")} }
+                            <Button onClick={handleLogOut}
                             color="inherit" variant="outlined" size="medium" 
                             >
                                 Log Out

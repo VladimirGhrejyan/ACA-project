@@ -8,6 +8,15 @@
       "password": "aaa",
       "gender": "male",
       "id": 1
+    },
+    {
+      "firstName": "Vladimir",
+      "lastName": "Ghrejyan",
+      "nickname": "Vladimir1",
+      "email": "vladimir.ghrejyan@gmail.com",
+      "password": "123",
+      "gender": "male",
+      "id": 2
     }
   ]
 }
