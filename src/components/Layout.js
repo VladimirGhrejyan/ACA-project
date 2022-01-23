@@ -20,7 +20,6 @@ function Layout() {
             <Nav />
         </Box>
         <Box sx={main}>
-            I am main
             <Outlet />
         </Box>
         <Box sx={footer}>

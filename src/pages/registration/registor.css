@@ -56,7 +56,6 @@ button{
     height: 50px;
     font-size: 25px;
     color: honeydew;
-    
 }
 .Cancel{
     border-radius: 0px 40px 40px 0px;
@@ -97,12 +96,4 @@ button{
     margin: 100px 150px;
     
 }
-.nextbtn{
-    position: absolute;
-    background-color: green;
-    height:50px;
-    width: 200px;
-    border-radius: 35px;
-    margin: 250px;
-    
-}
+

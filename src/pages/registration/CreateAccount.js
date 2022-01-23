@@ -7,10 +7,10 @@ import openEyes from "./images/openEyes.png"
 import closeEyes from "./images/closeEyes.png"
 import "./registor.css"
 
-function CreateAccount( {submited} ) {
+function CreateAccount( ) {
   
   const [isPassword, setIsPassword] = useState(false);
-  const {handleChange, handleSubmit, errors, user} = useFormLogic(submited)
+  const {handleChange, handleSubmit, errors, user} = useFormLogic()
   const navigate = useNavigate()
  
   return (
@@ -111,7 +111,7 @@ function CreateAccount( {submited} ) {
           {errors.gender &&
           <label className="errors">{errors.gender}</label>}
         </div>  
-
+        
         <div>
           <button 
           className="SignUP"
@@ -122,7 +122,7 @@ function CreateAccount( {submited} ) {
         <div>
             <button 
               className="Cancel" 
-              onClick={()=>navigate("/signin")}           
+              onClick={()=>navigate("/login")}           
             >Cancel</button>
         </div>
         </div>

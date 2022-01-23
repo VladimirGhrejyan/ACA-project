@@ -41,7 +41,7 @@ function Header() {
                         <Box sx={buttons}>
                         
                             <Button 
-                            color="inherit" variant="outlined" size="medium" 
+                            color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/myprofile") }
                             >
                                 My Profile
                             </Button>

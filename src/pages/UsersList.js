@@ -1,28 +1,27 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useAuth} from '../hook/useAuth'
 
 function UsersList() {
-    const [data, setData] = useState();
-    const [isLoaded, setIsLoaded] = useState(false)
-    useEffect(() => {
-        fetch('http://localhost:8000/users')
-        .then(res => res.json())
-        .then((res) => {
-            setData(res);
-            setIsLoaded( prev => !prev )
-        })
-    }, [])
 
+    const {user} = useAuth();
+
+    const handleOnClick = () => {
+        fetch(`http://localhost:8000/users/${user.id}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+                ...user,
+                lastName: 'Grigoryan'
+            }),
+            headers: {
+            'Content-type' : 'application/json; charset=UTF-8'
+            }
+        })
+    }
     
 
     return (
         <>
-        {
-            isLoaded === true && 
-            <ul>
-                {data.map( item => <li key={item.name}>{item.name}</li> )}
-            </ul>
-        }
+            <button onClick={handleOnClick}></button>
         </>
     )
 }

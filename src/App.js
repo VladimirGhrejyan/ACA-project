@@ -7,9 +7,10 @@ import NotFound from "./pages/NotFound";
 import UsersList from "./pages/UsersList";
 import LogIn from "./pages/login/LogIn";
 import CreateAccount from "./pages/registration/CreateAccount";
+import MyProfile from "./pages/myprofile/MyProfile";
 import Layout from "./components/Layout";
 import RequireAuth from "./hoc/RequireAuth";
-import {AuthProvider} from './hoc/AuthProvider'
+import {AuthProvider} from './hoc/AuthProvider';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
           <Route path="userslist" element={ <RequireAuth><UsersList /></RequireAuth> } />
+          <Route path="myprofile" element={ <RequireAuth><MyProfile /></RequireAuth> } />
           <Route path="*" element={<NotFound />} />
           <Route path="login" element={<LogIn />} />
           <Route path="registor" element={<CreateAccount />} />

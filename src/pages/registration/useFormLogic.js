@@ -1,11 +1,12 @@
 import  {useEffect, useState} from "react"
 import ErrorRegistor from "./ErrorRegistor"
+import {useNavigate} from "react-router-dom"
 
-function useFormLogic(submited) {
+function useFormLogic( ) {
 
-    const [dataFetch, setDataFetch ] = useState([])
+    const navigate = useNavigate();
+    const [dataFetch, setDataFetch ] = useState([]);
     const [errors, setErrors] = useState({});
-    const [datatIsCorect, setDataIsCorect] = useState(false)
     const [user, setUser] = useState( {
       firstName:"",
       lastName:"",
@@ -24,21 +25,6 @@ function useFormLogic(submited) {
         return () => setDataFetch(null)
        }, [errors] )
   
-    useEffect( () => {
-      if(Object.values(errors).length === 0 && datatIsCorect) {      
-        submited(true);
-        fetch('http://localhost:8000/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(user)
-       
-      })
-      }
-      // clear ussEffect code
-    }, [errors])
-  
     const handleChange = (e) => {
       setUser(
         prev => {
@@ -50,10 +36,26 @@ function useFormLogic(submited) {
       )
     }
     
+    const checkValidity = () => {
+      return !!(user.firstName && user.lastName && user.nickname && 
+        user.password && user.againPassword && user.gender && user.datatBirthday)
+    }
+
     const handleSubmit = (e) => {
       e.preventDefault();
       setErrors(ErrorRegistor(user,dataFetch));
-      setDataIsCorect(true)   
+
+      if (Object.values(errors).length === 0 && checkValidity()) {      
+          
+        fetch('http://localhost:8000/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+          },
+          body: JSON.stringify(user)
+        }).then(() => navigate("/login"))
+      };
+
     }
 
     return {handleChange, handleSubmit, errors, user}
