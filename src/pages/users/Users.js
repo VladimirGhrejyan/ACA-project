@@ -65,7 +65,7 @@ function Users() {
         return () => setData(null);
     }, [] )
 
-    const usersList = data.map( (item) => <CardItem nickname={item.nickname} firstName={item.firstName} lastName={item.lastName} key={item.id} /> );
+    const usersList = data.map( (item) => <CardItem nickname={item.nickname} firstName={item.firstName} lastName={item.lastName} key={item.id} id={item.id} /> );
 
     return (
         

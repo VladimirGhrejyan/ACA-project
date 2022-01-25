@@ -1,8 +1,11 @@
 import React from 'react';
 import {Card, CardMedia, CardContent, CardActions, Typography, Button} from '@mui/material';
+import {useNavigate} from 'react-router-dom';
 
 function CardItem( props ) {
-  
+    
+    const navigate = useNavigate();
+
     return (
         <Card sx={{ maxWidth: 340, backgroundColor: 'rgba(0,0,0,0.5)' }}>
             <CardMedia
@@ -21,7 +24,7 @@ function CardItem( props ) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button variant="outlined" color="inherit" size="small" sx={{ color: 'gray' }}>Learn More</Button>
+                <Button variant="outlined" color="inherit" size="small" sx={{ color: 'gray' }} onClick={ () => navigate(`/users/${props.id}`) }>Learn More</Button>
             </CardActions>
         </Card>
     );
