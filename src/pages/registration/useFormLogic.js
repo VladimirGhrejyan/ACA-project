@@ -15,7 +15,8 @@ function useFormLogic( ) {
       password:"",
       againPassword:"",
       gender: "",
-      datatBirthday:""
+      datatBirthday:"",
+      img: []
     } )
     
     useEffect( () => {

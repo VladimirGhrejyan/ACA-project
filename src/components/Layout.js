@@ -1,10 +1,9 @@
 import React from 'react'
 import {Outlet} from 'react-router-dom'
-import "./layout.css"
 import Header from './header/Header'
 import Nav from './nav/Nav'
 import {Box} from '@mui/material'
-import styles from './LayoutStyles'
+import styles from './layoutStyles'
 
 function Layout() {
     const {container, header, nav, main, footer} = styles;

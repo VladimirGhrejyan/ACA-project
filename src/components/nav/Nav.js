@@ -18,7 +18,7 @@ function Nav() {
                         </Button>
                     
                         <Button color="inherit" variant="text" size="large"
-                        onClick={ () => { navigate("userslist") } }
+                        onClick={ () => { navigate("users") } }
                         >
                             Users
                         </Button>
