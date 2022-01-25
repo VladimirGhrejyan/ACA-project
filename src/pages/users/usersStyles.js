@@ -7,7 +7,9 @@ const styles = {
         gridTemplateColumns: '5fr 1fr'
     },
     users_filter: {
-        gridArea: 'users_filter'
+        gridArea: 'users_filter',
+        display: 'grid',
+        marginTop: '7px',
     },
     users_list: {
         display: 'grid',

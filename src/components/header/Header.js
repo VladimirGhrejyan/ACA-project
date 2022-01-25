@@ -6,7 +6,7 @@ import styles from './headerStyles';
 import { useAuth } from '../../hook/useAuth';
 
 function Header() {
-    const {container, buttons} = styles;
+    const {header_container, header_buttons} = styles;
     const navigate = useNavigate();
     const {signout} = useAuth();
     
@@ -18,7 +18,7 @@ function Header() {
 
         <Box >
                 <AppBar position="static" sx={ {height: '70px', backgroundColor: "black", opacity: 0.2} }>
-                    <Box sx={container}>
+                    <Box sx={header_container}>
                         
                         <Box sx={ {display: 'inherit', justifyContent: 'center'} }>
                         
@@ -38,7 +38,7 @@ function Header() {
                         
                         </Box>
                         
-                        <Box sx={buttons}>
+                        <Box sx={header_buttons}>
                         
                             <Button 
                             color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/myprofile") }

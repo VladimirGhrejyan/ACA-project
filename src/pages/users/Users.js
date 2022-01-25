@@ -19,7 +19,6 @@ function Users() {
 
     const handleSearchChange = (e) => {
         setSearch( e.target.value );
-        setData( unfilteredData.current.filter( item => item.nickname.toLowerCase().includes( search.toLowerCase() ) ) )
     }
 
     const handleGenderChange = (e) => {
@@ -32,6 +31,14 @@ function Users() {
 
     const handleAgeToChange = (e) => {
         setAgeTo( e.target.value )
+    }
+
+    const handleSearchClick = () => {
+        setData( unfilteredData.current.filter( item => item.nickname.toLowerCase().includes( search.toLowerCase() ) ) )
+    }
+
+    const handleResetClick = () => {
+        setData( unfilteredData.current )
     }
 
     const handleFilterClick = () => {
@@ -71,6 +78,7 @@ function Users() {
                              ageTo={ageTo} handleAgeToChange={handleAgeToChange} 
                              handleFilterClick={handleFilterClick} 
                              search={search} handleSearchChange={handleSearchChange}
+                             handleSearchClick={handleSearchClick} handleResetClick={handleResetClick}
                 />
             </Box>
 
