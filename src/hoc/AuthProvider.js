@@ -6,12 +6,14 @@ export const AuthProvider = ( {children} ) => {
     const [user, setUser] = useState(null);
 
     const signin = (newUser, cb) => {
-        setUser(newUser);
+        setUser( newUser );
+        localStorage.id = newUser.id
         cb();
     }
 
     const signout = (cb) => {
         setUser(null);
+        localStorage.clear();
         cb();
     }
 

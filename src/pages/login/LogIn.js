@@ -22,7 +22,7 @@ function LogIn() {
     const handleSubmit = () => {
       const index = data.findIndex( (elem) => elem.nickname === nickname && elem.password === password );
       if (index >= 0) {
-        signin( data[index], () => { navigate("/") } )
+        signin( data[index], () => { navigate("/") } );
       } 
     }
     

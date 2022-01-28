@@ -3,6 +3,7 @@ import {Box} from '@mui/material';
 import styles from './usersStyles';
 import CardItem from './CardItem';
 import FilterUsers from './FilterUsers';
+// import { useAuth } from '../../hook/useAuth'
 
 function Users() {
     const {users_container, users_filter, users_list} = styles;
@@ -11,7 +12,53 @@ function Users() {
     const [ageFrom, setAgeFrom] = useState('');
     const [ageTo, setAgeTo] = useState('');
     const [search, setSearch] = useState('');
+    // const [user, setUser] = useState();
     const unfilteredData = useRef([]);
+    const ID = +localStorage.id;
+    // const {user} = useAuth();
+    
+
+    // useEffect( () => {
+    //     fetch(`http://localhost:8000/users/${localStorage.id}`)
+    //     .then( (res) => res.json() )
+    //     .then( (res) => setUser(res) )
+    // }, [] )
+
+    // useEffect( () => {
+    //     fetch('http://localhost:8000/users')
+    //     .then( (res) => res.json() )
+    //     .then( (res) => {
+    //         setData(res.filter( item => item.id !== localStorage.id ));
+    //         unfilteredData.current = res.filter( item => item.id !== localStorage.id );
+    //     } );
+    //     return () => setData(null);
+    // }, [] )
+
+    // useEffect( () => {
+    //     Promise.all([
+    //         fetch(`http://localhost:8000/users/${ID}`),
+    //         fetch('http://localhost:8000/users')
+    //     ])
+    //     .then( res => [res[0].json(), res[1].json()] )
+    //     .then( res => {
+    //         setUser(res[0]);
+    //         return res[1]
+    //     } )
+    //     .then( res => {
+    //         setData(res.filter( item => item.id !== ID ));
+    //         unfilteredData.current = res.filter( item => item.id !== ID );
+    //     } )
+    // }, [])
+
+    useEffect( () => {
+        fetch('http://localhost:8000/users')
+        .then( res => res.json() )
+        .then( res => {
+                setData(res.filter( item => item.id !== ID ));
+                unfilteredData.current = res.filter( item => item.id !== ID );
+        } )
+    }, [] )
+
 
     const ageCalculate = (bday) => {
         return Math.trunc( ( new Date() - new Date(bday) ) / 31536000000 )
@@ -55,21 +102,10 @@ function Users() {
         }
     }
 
-    useEffect( () => {
-        fetch('http://localhost:8000/users')
-        .then( (res) => res.json() )
-        .then( (res) => {
-            setData(res);
-            unfilteredData.current = res;
-        } );
-        return () => setData(null);
-    }, [] )
-
-    const usersList = data.map( (item) => <CardItem nickname={item.nickname} firstName={item.firstName} lastName={item.lastName} key={item.id} id={item.id} /> );
+    const usersList = data.map( (item) => <CardItem cardUser={item} key={item.id} /> );
 
     return (
         
-
         <Box sx={users_container}>
 
             <Box sx={users_filter}>
