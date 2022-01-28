@@ -17,7 +17,7 @@ function Header() {
     return (
 
         <Box >
-                <AppBar position="static" sx={ {height: '70px', backgroundColor: "black", opacity: 0.2} }>
+                <AppBar position="static" sx={ {height: '80px', backgroundColor: "black", opacity: 0.2} }>
                     <Box sx={header_container}>
                         
                         <Box sx={ {display: 'inherit', justifyContent: 'center'} }>

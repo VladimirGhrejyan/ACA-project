@@ -1,0 +1,18 @@
+.actionsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: grey; */
+}
+
+.actionBtn {
+    width: auto;
+}
+
+.modalCloseIcon {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   cursor: pointer;
+}

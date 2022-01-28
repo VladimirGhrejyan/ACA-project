@@ -35,7 +35,7 @@ function UserPage() {
                 <Typography variant="h4" component="div" sx={ {color: 'black'} } >{data.email}</Typography>
                 <Typography variant="h4" component="div" sx={ {color: 'black'} } >{data.firstName} {data.lastName}</Typography>
                 <Typography variant="h4" component="div" sx={ {color: 'black'} } >Gender: {data.gender}</Typography>
-                <Typography variant="h4" component="div" sx={ {color: 'black'} } >Age: {ageCalculate( data.datatBirthday )}</Typography>
+                <Typography variant="h4" component="div" sx={ {color: 'black'} } >Age: {ageCalculate( data.dataBirthday )}</Typography>
             </Box>
 
         </Box>

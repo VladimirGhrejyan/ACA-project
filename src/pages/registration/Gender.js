@@ -1,11 +1,8 @@
 import React from 'react'
 
 function Gender(props) {
-
-    
     const handleChange = props.handleChange;
     
-
     return (
     <>
     <span className="inputGend">

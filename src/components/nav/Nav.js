@@ -9,7 +9,7 @@ function Nav() {
 
     return (
         <Box>
-            <AppBar position='static' sx={ nav_appbar }>
+            <AppBar position="static" sx={ nav_appbar }>
                 <Box sx={nav_container}>
                         <Button color="inherit" variant="text" size="large"
                         onClick={ () => { navigate("/") } }
@@ -24,9 +24,9 @@ function Nav() {
                         </Button>
                     
                         <Button color="inherit" variant="text" size="large"
-                        onClick={ () => { navigate("about") } }
+                        onClick={ () => { navigate("posts") } }
                         >
-                            About
+                            Posts
                         </Button>
                 </Box>
             </AppBar>

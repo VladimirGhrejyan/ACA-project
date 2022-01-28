@@ -1,0 +1,8 @@
+.footer_container {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    bottom: 0;
+}

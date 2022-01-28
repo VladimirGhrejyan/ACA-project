@@ -8,8 +8,8 @@
       "password": "123456",
       "againPassword": "123456",
       "gender": "male",
-      "datatBirthday": "1990-10-10",
-      "img": [],
+      "dataBirthday": "1990-10-10",
+      "profileImage": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
       "followers": [],
       "following": [
         2
@@ -17,20 +17,36 @@
       "id": 1
     },
     {
-      "firstName": "Hakob",
-      "lastName": "Hakobyan",
+      "firstName": "Aram",
+      "lastName": "Aramyan",
       "nickname": "Hakob1",
       "email": "hakob@mail.ru",
-      "password": "123456",
-      "againPassword": "123456",
+      "password": "000000",
+      "againPassword": "000000",
       "gender": "male",
-      "datatBirthday": "1994-04-04",
-      "img": [],
+      "dataBirthday": "1994-04-04",
+      "profileImage": "https://gp2dzm.ru/wp-content/uploads/2018/11/no-photo-male.jpg",
       "followers": [
         1
       ],
       "following": [],
       "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": "1d70f77f-e4c7-4d6a-a94a-a89684cbcd3a",
+      "title": "s",
+      "content": "ssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "createdAt": "2022-01-28",
+      "likes": []
+    },
+    {
+      "id": "68f7962f-0a19-4aa0-8668-6278a00e0408",
+      "title": "sdads",
+      "content": "dfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "createdAt": "2022-01-28",
+      "likes": []
     }
   ]
 }

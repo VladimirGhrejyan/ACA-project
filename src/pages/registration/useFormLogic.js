@@ -15,8 +15,8 @@ function useFormLogic( ) {
       password:"",
       againPassword:"",
       gender: "",
-      datatBirthday:"",
-      img: [],
+      dataBirthday:"",
+      profileImage: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
       followers: [],
       following: []
     } )
@@ -41,7 +41,7 @@ function useFormLogic( ) {
     
     const checkValidity = () => {
       return !!(user.firstName && user.lastName && user.nickname && 
-        user.password && user.againPassword && user.gender && user.datatBirthday)
+        user.password && user.againPassword && user.gender && user.dataBirthday)
     }
 
     const handleSubmit = (e) => {

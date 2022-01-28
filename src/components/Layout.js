@@ -2,6 +2,7 @@ import React from 'react'
 import {Outlet} from 'react-router-dom'
 import Header from './header/Header'
 import Nav from './nav/Nav'
+import Footer from './footer/Footer'
 import {Box} from '@mui/material'
 import styles from './layoutStyles'
 
@@ -22,7 +23,7 @@ function Layout() {
             <Outlet />
         </Box>
         <Box sx={footer}>
-            2021
+            <Footer />
         </Box>
     </Box>
     </>

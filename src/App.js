@@ -6,11 +6,13 @@ import NotFound from "./pages/NotFound";
 import Users from "./pages/users/Users";
 import LogIn from "./pages/login/LogIn";
 import CreateAccount from "./pages/registration/CreateAccount";
-import ChangeMyDataList from "./pages/ChangeUserData/ChangeMyDataList"
+import MyProfile from "./pages/myprofile/MyProfile"
 import Layout from "./components/Layout";
 import UserPage from "./pages/users/UserPage";
+import Posts from "./pages/posts/Posts";
 import RequireAuth from "./hoc/RequireAuth";
 import {AuthProvider} from './hoc/AuthProvider';
+
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
           <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
           <Route path="users" element={ <RequireAuth><Users /></RequireAuth> } />
           <Route path="users/:id" element={ <RequireAuth><UserPage></UserPage></RequireAuth> } />
-          <Route path="myprofile" element={ <RequireAuth><ChangeMyDataList /></RequireAuth> } />
+          <Route path="myprofile" element={ <RequireAuth><MyProfile /></RequireAuth> } />
+          <Route path="posts" element={ <RequireAuth><Posts /></RequireAuth> } />
           <Route path="*" element={<NotFound />} />
           <Route path="login" element={<LogIn />} />
           <Route path="registor" element={<CreateAccount />} />

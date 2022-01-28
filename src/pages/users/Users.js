@@ -85,14 +85,14 @@ function Users() {
 
     const handleFilterClick = () => {
         if (ageTo && gender) {
-            setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.datatBirthday) && ageTo >= ageCalculate(item.datatBirthday) && item.gender === gender )  )
+            setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.dataBirthday) && ageTo >= ageCalculate(item.dataBirthday) && item.gender === gender )  )
         } else {
             if (ageTo) {
-                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.datatBirthday) && ageTo >= ageCalculate(item.datatBirthday) ) )
+                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.dataBirthday) && ageTo >= ageCalculate(item.dataBirthday) ) )
             } else if (gender) {
-                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.datatBirthday) && item.gender === gender ) )
+                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.dataBirthday) && item.gender === gender ) )
             } else {
-                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.datatBirthday) ) )
+                setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.dataBirthday) ) )
             }
         }
     }

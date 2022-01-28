@@ -11,8 +11,8 @@ function Birthday(props) {
         <input type="date"
           className="input"
           min="1960-01-01"
-          name="datatBirthday"
-          value = {user.datatBirthday}
+          name="dataBirthday"
+          value = {user.dataBirthday}
           max={`${minYear}-01-01`}
           onChange={handleChange}
         />

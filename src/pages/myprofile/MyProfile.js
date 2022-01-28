@@ -1,25 +1,17 @@
-import React from 'react';
-import styles from './myProfileStyles';
-import {Box} from '@mui/material';
+import { useState } from "react";
+import MyProfileStep1 from "./MyProfileStep1"
+import PasswordForEdit from "./PaswordForEdit";
 
-function MyProfile() {
-    const {profile_container, profile_main, profile_edit, profile_warning} = styles;
+const MyProfile = () => {
+
+    const [edit, setEdit] = useState(false);
     
-    return (
-        <Box sx={profile_container}>
-            <Box sx={profile_main}>
+    const stepPage = () => {
+        setEdit(!edit)
+    }
 
-            </Box>
-
-            <Box sx={profile_edit}>
-
-            </Box>
-
-            <Box sx={profile_warning}>
-
-            </Box>
-        </Box>
-    )
+  return (
+      (edit) ? <PasswordForEdit  /> : <MyProfileStep1  stepPage={stepPage} />
+  )
 }
-
-export default MyProfile;
+export default MyProfile

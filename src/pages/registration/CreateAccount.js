@@ -102,8 +102,8 @@ function CreateAccount( ) {
 
         <div>
           <Birthday handleChange={handleChange} user={user}/>
-          {errors.datatBirthday &&
-          <label className="errors">{errors.datatBirthday}</label>}
+          {errors.dataBirthday &&
+          <label className="errors">{errors.dataBirthday}</label>}
         </div>
 
         <div >
