@@ -10,10 +10,10 @@
       "gender": "male",
       "datatBirthday": "1990-10-10",
       "img": [],
-      "followers": [
+      "followers": [],
+      "following": [
         2
       ],
-      "following": [],
       "id": 1
     },
     {
@@ -26,10 +26,10 @@
       "gender": "male",
       "datatBirthday": "1994-04-04",
       "img": [],
-      "followers": [],
-      "following": [
+      "followers": [
         1
       ],
+      "following": [],
       "id": 2
     }
   ]

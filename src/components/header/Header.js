@@ -40,17 +40,22 @@ function Header() {
                         
                         <Box sx={header_buttons}>
                         
-                            <Button 
-                            color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/myprofile") }
-                            >
-                                My Profile
-                            </Button>
-                            
-                            <Button onClick={handleLogOut}
-                            color="inherit" variant="outlined" size="medium" 
-                            >
-                                Log Out
-                            </Button>
+                            {
+                                localStorage.id && 
+                                <>
+                                <Button 
+                                color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/myprofile") }
+                                >
+                                    My Profile
+                                </Button>
+                                
+                                <Button onClick={handleLogOut}
+                                color="inherit" variant="outlined" size="medium" 
+                                >
+                                    Log Out
+                                </Button>
+                                </>
+                            }
                         
                         </Box>
                     </Box>

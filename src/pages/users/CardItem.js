@@ -23,7 +23,7 @@ function CardItem( props ) {
                 setFollow(false)
             }
         } )
-
+        return () => setUser(null)
     }, [] )
         
     const handleOnClick = () => {

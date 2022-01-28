@@ -3,7 +3,6 @@ import {Box} from '@mui/material';
 import styles from './usersStyles';
 import CardItem from './CardItem';
 import FilterUsers from './FilterUsers';
-// import { useAuth } from '../../hook/useAuth'
 
 function Users() {
     const {users_container, users_filter, users_list} = styles;
@@ -12,27 +11,24 @@ function Users() {
     const [ageFrom, setAgeFrom] = useState('');
     const [ageTo, setAgeTo] = useState('');
     const [search, setSearch] = useState('');
-    // const [user, setUser] = useState();
+    const [user, setUser] = useState('');
     const unfilteredData = useRef([]);
     const ID = +localStorage.id;
-    // const {user} = useAuth();
-    
 
-    // useEffect( () => {
-    //     fetch(`http://localhost:8000/users/${localStorage.id}`)
-    //     .then( (res) => res.json() )
-    //     .then( (res) => setUser(res) )
-    // }, [] )
-
-    // useEffect( () => {
-    //     fetch('http://localhost:8000/users')
-    //     .then( (res) => res.json() )
-    //     .then( (res) => {
-    //         setData(res.filter( item => item.id !== localStorage.id ));
-    //         unfilteredData.current = res.filter( item => item.id !== localStorage.id );
-    //     } );
-    //     return () => setData(null);
-    // }, [] )
+    useEffect( () => {
+        fetch('http://localhost:8000/users')
+        .then( res => res.json() )
+        .then( res => {
+                setData(res.filter( item => item.id !== ID ));
+                unfilteredData.current = res.filter( item => {
+                    if (item.id !== ID) {
+                        return true;
+                    } else {
+                        setUser(item)
+                    }
+                } );
+        } )
+    }, [] )
 
     // useEffect( () => {
     //     Promise.all([
@@ -49,15 +45,6 @@ function Users() {
     //         unfilteredData.current = res.filter( item => item.id !== ID );
     //     } )
     // }, [])
-
-    useEffect( () => {
-        fetch('http://localhost:8000/users')
-        .then( res => res.json() )
-        .then( res => {
-                setData(res.filter( item => item.id !== ID ));
-                unfilteredData.current = res.filter( item => item.id !== ID );
-        } )
-    }, [] )
 
 
     const ageCalculate = (bday) => {
@@ -88,6 +75,14 @@ function Users() {
         setData( unfilteredData.current )
     }
 
+    const handleFollowsClick = () => {
+        setData( unfilteredData.current.filter( item => user.following.includes(item.id) ) )
+    }
+
+    const handleFollowersClick = () => {
+        setData( unfilteredData.current.filter( item => user.followers.includes(item.id) ) )
+    }
+
     const handleFilterClick = () => {
         if (ageTo && gender) {
             setData(  unfilteredData.current.filter( item => ageFrom <= ageCalculate(item.datatBirthday) && ageTo >= ageCalculate(item.datatBirthday) && item.gender === gender )  )
@@ -115,6 +110,7 @@ function Users() {
                              handleFilterClick={handleFilterClick} 
                              search={search} handleSearchChange={handleSearchChange}
                              handleSearchClick={handleSearchClick} handleResetClick={handleResetClick}
+                             handleFollowsClick={handleFollowsClick} handleFollowersClick={handleFollowersClick}
                 />
             </Box>
 
@@ -127,3 +123,25 @@ function Users() {
 }
 
 export default Users;
+
+    // import { useAuth } from '../../hook/useAuth'
+    // const [user, setUser] = useState();
+    // const {user} = useAuth();
+    
+
+    // useEffect( () => {
+    //     fetch(`http://localhost:8000/users/${localStorage.id}`)
+    //     .then( (res) => res.json() )
+    //     .then( (res) => setUser(res) )
+    // }, [] )
+
+    // useEffect( () => {
+    //     fetch('http://localhost:8000/users')
+    //     .then( (res) => res.json() )
+    //     .then( (res) => {
+    //         setData(res.filter( item => item.id !== localStorage.id ));
+    //         unfilteredData.current = res.filter( item => item.id !== localStorage.id );
+    //     } );
+    //     return () => setData(null);
+    // }, [] )
+

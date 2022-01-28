@@ -46,7 +46,14 @@ function FilterUsers( props ) {
                 <Button color="inherit" variant="outlined" onClick={ props.handleResetClick }>Reset</Button>
             </Box>
 
+            <Box sx={{display: 'grid', marginTop: '20px', marginRight: '5px', color: 'gray', gridTemplateRows: '1fr 1fr', gridRowGap: '7px'}}>
+                <Button color="inherit" variant="outlined" onClick={props.handleFollowsClick}>My Follows</Button>
+                <Button color="inherit" variant="outlined" onClick={props.handleFollowersClick}>My Followers</Button>
+            </Box>
+
         </Box>
+
+
 
         </>
   );
