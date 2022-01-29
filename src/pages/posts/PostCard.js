@@ -33,7 +33,7 @@ export default function PostCard(props) {
 
   return (
     <Card sx={{ maxWidth: '900px', backgroundColor: 'gray', borderRadius: '25px'}}>
-      <CardHeader
+      <CardHeader 
         avatar={
           <Avatar  aria-label="recipe"
           src={userImage} alt="img" onClick={ () => {

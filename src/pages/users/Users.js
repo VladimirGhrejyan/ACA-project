@@ -30,23 +30,6 @@ function Users() {
         } )
     }, [] )
 
-    // useEffect( () => {
-    //     Promise.all([
-    //         fetch(`http://localhost:8000/users/${ID}`),
-    //         fetch('http://localhost:8000/users')
-    //     ])
-    //     .then( res => [res[0].json(), res[1].json()] )
-    //     .then( res => {
-    //         setUser(res[0]);
-    //         return res[1]
-    //     } )
-    //     .then( res => {
-    //         setData(res.filter( item => item.id !== ID ));
-    //         unfilteredData.current = res.filter( item => item.id !== ID );
-    //     } )
-    // }, [])
-
-
     const ageCalculate = (bday) => {
         return Math.trunc( ( new Date() - new Date(bday) ) / 31536000000 )
     }

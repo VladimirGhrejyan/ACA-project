@@ -15,7 +15,7 @@ return (
         </div>
         
         <div className = 'wrapperPassword'>
-            <span className = 'top_text'>Change your Accaount</span>
+            <span className = 'top_text'>Change your Account</span>
           <div className = 'forPassword'>
             <input className = 'dataPass'    value = {changedata.password} name = "password" type = "password"
                placeholder = 'new password'  onChange={handleOnChange }/><br/>

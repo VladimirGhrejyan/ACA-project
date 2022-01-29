@@ -33,7 +33,7 @@ function Header() {
                         <Box sx={ {display: 'inherit', justifyContent: 'center', alignContent: 'center' } }>
                             
                             <Typography variant="h3">
-                                Our Project
+                                social network
                             </Typography>
                         
                         </Box>
@@ -41,8 +41,8 @@ function Header() {
                         <Box sx={header_buttons}>
                         
                             {
-                                localStorage.id && 
-                                <>
+                                localStorage.id ? 
+                                (<>
                                 <Button 
                                 color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/myprofile") }
                                 >
@@ -54,7 +54,14 @@ function Header() {
                                 >
                                     Log Out
                                 </Button>
-                                </>
+                                </>) : 
+                                (
+                                <Button 
+                                color="inherit" variant="outlined" size="medium" onClick={ () => navigate("/login") }
+                                >
+                                    Log In
+                                </Button>
+                                )
                             }
                         
                         </Box>

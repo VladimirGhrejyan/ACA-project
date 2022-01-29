@@ -86,21 +86,3 @@ const useMyData = () => {
 }
 
 export default useMyData
-
-
-// {
-//   "firstName": "Hakob",
-//   "lastName": "Hakobyan",
-//   "nickname": "Hakob1",
-//   "email": "hakob@mail.ru",
-//   "password": "123456",
-//   "againPassword": "123456",
-//   "gender": "male",
-//   "dataBirthday": "1994-04-04",
-//   "profileImage": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
-//   "followers": [
-//     1
-//   ],
-//   "following": [],
-//   "id": 2
-// }

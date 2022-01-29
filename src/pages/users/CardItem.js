@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {Card, CardMedia, CardContent, CardActions, Typography, Button} from '@mui/material';
-// import { useAuth } from '../../hook/useAuth'
 import {useNavigate} from 'react-router-dom';
 
 function CardItem( props ) {
     
-    // const {user} = useAuth();
     const ID = localStorage.id;
     const cardUser = props.cardUser;
     const userImage = cardUser.profileImage;

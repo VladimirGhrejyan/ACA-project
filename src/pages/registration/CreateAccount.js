@@ -64,7 +64,7 @@ function CreateAccount( ) {
             onChange={handleChange}
           />
           {errors.email &&
-          <label htmlFor="email"className="errors">{errors.email}</label>}
+          <label htmlFor="email" className="errors">{errors.email}</label>}
         </div> 
 
         <div className="pas">

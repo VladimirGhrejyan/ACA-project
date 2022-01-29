@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import PostCard from "./PostCard";
 import { v4 as uuidv4 } from "uuid";
 import Snackbar from "@mui/material/Snackbar";
-import { useAuth } from "../../hook/useAuth";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "./styles.module.css"
 import Grid from '@mui/material/Grid';
@@ -194,7 +192,6 @@ export default function BasicModal() {
 
         <Grid container spacing={2}>
             {postsList.map((post) => {
-            console.log(post)
             return (
               <Grid item xs={8}>
                   <PostCard
