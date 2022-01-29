@@ -25,21 +25,31 @@ const style = {
 };
 
 export default function BasicModal() {
+  const ID = localStorage.id;
   const [open, setOpen] = useState(false);
   const [snackOpen, setSnackOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [postsList, setPostsList] = useState([]);
-  const { user } = useAuth();
+  // const { user } = useAuth();
+  const [user, setUser] = useState('');
+  const [img, setImg] = useState('');
 
   const [formData, setFormData] = useState({
     id: null,
     title: null,
     content: null,
     createdAt: null,
-    likes: [],
+    authorID: ID,
+    likes: []
   });
 
+  useEffect( () => {
+    fetch(`http://localhost:8000/users/${ID}`)
+    .then( res => res.json() )
+    .then( res => setUser(res))
+  }, [] )
+  
   const fetchPosts = () => {
     fetch("http://localhost:8000/posts")
       .then((res) => res.json())
@@ -184,9 +194,11 @@ export default function BasicModal() {
 
         <Grid container spacing={2}>
             {postsList.map((post) => {
+            console.log(post)
             return (
               <Grid item xs={8}>
                   <PostCard
+                  key={post.id}
                   id={post.id}
                   content={post.content}
                   title={post.title}
@@ -194,6 +206,8 @@ export default function BasicModal() {
                   likesCount={post.likes.length}
                   onDelete={deletePostById}
                   onLike={addLike}
+                  profileImage={post.profileImage}
+                  authorID={post.authorID}
                   />
               </Grid>
             );

@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const useMyData = () => {
     
     const navigate = useNavigate()
-    // const {user} = useAuth();
-    // const Image = user.profileImage;
     const ID = localStorage.id;
     const {signout} = useAuth();
     const [image, setImage] = useState('');

@@ -8,6 +8,7 @@ function CardItem( props ) {
     // const {user} = useAuth();
     const ID = localStorage.id;
     const cardUser = props.cardUser;
+    const userImage = cardUser.profileImage;
     const navigate = useNavigate();
     const [user, setUser] = useState();
     const [follow, setFollow] = useState();
@@ -78,13 +79,13 @@ function CardItem( props ) {
     } 
 
     return (
-        <Card sx={{ maxWidth: 340, backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <Card sx={{ maxWidth: 340, maxHeight: 460, backgroundColor: 'rgba(0,0,0,0.5)' }}>
             <CardMedia
                 sx={ {overflow: 'hidden'} }
                 component="img"
                 alt="user pic"
                 height="280"
-                image="https://ichef.bbci.co.uk/news/976/cpsprodpb/F9B1/production/_118012936_beckham_getty.jpg"
+                image={userImage}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{ color: 'gray' }} >

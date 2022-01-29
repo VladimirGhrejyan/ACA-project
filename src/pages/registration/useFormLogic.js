@@ -16,7 +16,7 @@ function useFormLogic( ) {
       againPassword:"",
       gender: "",
       dataBirthday:"",
-      profileImage: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      profileImage: "https://restorixhealth.com/wp-content/uploads/2018/08/No-Image.png",
       followers: [],
       following: []
     } )

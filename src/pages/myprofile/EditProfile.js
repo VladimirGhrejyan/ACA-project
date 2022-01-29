@@ -17,11 +17,11 @@ return (
         <div className = 'wrapperPassword'>
             <span className = 'top_text'>Change your Accaount</span>
           <div className = 'forPassword'>
-            <input className = 'dataPass'    value = {changedata.password} name = "password" type = "text"
+            <input className = 'dataPass'    value = {changedata.password} name = "password" type = "password"
                placeholder = 'new password'  onChange={handleOnChange }/><br/>
                { changedata.password &&
                  <label htmlFor="password" className="errors">{errors.password}</label> }
-            <input className = 'dataPass' value={changedata.againPassword} name = "againPassword" type="text"
+            <input className = 'dataPass' value={changedata.againPassword} name = "againPassword" type="password"
                placeholder = 'retry new password' onChange={handleOnChange  }/><br/>
             <input className = 'dataPass' value={changedata.profileImage} name = "profileImage" type="text"
                placeholder = 'input Image URL' onChange={handleOnChange  }/><br/>

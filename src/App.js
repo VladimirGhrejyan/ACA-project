@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/users/Users";
 import LogIn from "./pages/login/LogIn";
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<RequireAuth><About /></RequireAuth>} />
           <Route path="users" element={ <RequireAuth><Users /></RequireAuth> } />
           <Route path="users/:id" element={ <RequireAuth><UserPage></UserPage></RequireAuth> } />
           <Route path="myprofile" element={ <RequireAuth><MyProfile /></RequireAuth> } />

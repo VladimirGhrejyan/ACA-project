@@ -24,7 +24,7 @@ function UserPage() {
             <Box>
                 <CardMedia
                     component="img"
-                    image="http://d279m997dpfwgl.cloudfront.net/wp/2020/02/krivak-1-1000x750.jpg"
+                    image={data.profileImage}
                     alt="profpic"
                     height="420"
                 />

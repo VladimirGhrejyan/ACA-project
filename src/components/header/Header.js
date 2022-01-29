@@ -23,7 +23,7 @@ function Header() {
                         <Box sx={ {display: 'inherit', justifyContent: 'center'} }>
                         
                             <IconButton
-                            edge="start" color="inherit" aria-label="menu" onClick={ () => { navigate("/") } }
+                            sx={{marginTop: '15px'}} edge="start" color="inherit" aria-label="menu" onClick={ () => { navigate("/") } }
                             >
                                 <img src={icon}/>
                             </IconButton>

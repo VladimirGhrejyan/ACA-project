@@ -1,4 +1,5 @@
 import * as React from "react";
+import {useState, useEffect} from 'react';
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -11,21 +12,35 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DeleteIcon from "@mui/icons-material/Delete";
 import styles from "./styles.module.css";
+import {useNavigate} from 'react-router-dom';
 
 export default function PostCard(props) {
-  const { content, title, createdAt, id, onDelete, onLike, likesCount } = props;
+  const { content, title, createdAt, id, onDelete, onLike, likesCount, authorID } = props;
   const [expanded, setExpanded] = React.useState(false);
+  const navigate = useNavigate();
+  const [userImage, setUserImage] = useState('') 
 
   const handleExpandClick = () => {
     setExpanded((prev) => !prev);
   };
 
+  useEffect( () => {
+    fetch(`http://localhost:8000/users/${authorID}`)
+    .then( res => res.json() )
+    .then( res => setUserImage(res.profileImage) )
+  } )
+  
+
   return (
     <Card sx={{ maxWidth: '900px', backgroundColor: 'gray', borderRadius: '25px'}}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+          <Avatar  aria-label="recipe"
+          src={userImage} alt="img" onClick={ () => {
+            navigate(`/users/${authorID}`)
+          }}
+          >
+            
           </Avatar>
         }
         

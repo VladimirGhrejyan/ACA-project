@@ -30,7 +30,7 @@ function LogIn() {
       <>
       <div className="window">
          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" id="img"/>
-         <h2 id="wm">Welcome to Maket</h2>
+         <h2 id="wm">Welcome</h2>
             <input type="text" 
             placeholder=" Your nicknameName..." 
             value={nickname}

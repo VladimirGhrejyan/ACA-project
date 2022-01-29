@@ -1,52 +1,79 @@
 {
   "users": [
     {
-      "firstName": "Vagharsh",
-      "lastName": "Vagharshyan",
-      "nickname": "Vagho1",
-      "email": "vagho@mail.ru",
+      "firstName": "Steven",
+      "lastName": "Gerrard",
+      "nickname": "Gerrard8",
+      "email": "steven.gerrard@gmail.com",
       "password": "123456",
       "againPassword": "123456",
       "gender": "male",
-      "dataBirthday": "1990-10-10",
-      "profileImage": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
-      "followers": [],
-      "following": [
-        2
+      "dataBirthday": "1980-05-30",
+      "profileImage": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F0ea19f6a-994c-11eb-929e-8d73842419de.jpg?crop=1310%2C737%2C154%2C454&resize=1200",
+      "followers": [
+        5
       ],
+      "following": [],
       "id": 1
     },
     {
-      "firstName": "Aram",
-      "lastName": "Aramyan",
-      "nickname": "Hakob1",
-      "email": "hakob@mail.ru",
-      "password": "000000",
-      "againPassword": "000000",
+      "firstName": "Mark",
+      "lastName": "Zuckerberg",
+      "nickname": "M.Zuckerberg",
+      "email": "zuckerberg@gmail.com",
+      "password": "123456",
+      "againPassword": "123456",
       "gender": "male",
-      "dataBirthday": "1994-04-04",
-      "profileImage": "https://gp2dzm.ru/wp-content/uploads/2018/11/no-photo-male.jpg",
-      "followers": [
-        1
-      ],
+      "dataBirthday": "1984-05-14",
+      "profileImage": "https://kompanion.online/wp-content/uploads/2017/12/mark-zuckerberg-headshot-1200x900.jpg",
+      "followers": [],
       "following": [],
       "id": 2
-    }
-  ],
-  "posts": [
-    {
-      "id": "1d70f77f-e4c7-4d6a-a94a-a89684cbcd3a",
-      "title": "s",
-      "content": "ssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "createdAt": "2022-01-28",
-      "likes": []
     },
     {
-      "id": "68f7962f-0a19-4aa0-8668-6278a00e0408",
-      "title": "sdads",
-      "content": "dfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidfjsdkjspdgjposijdg;pskldjfpiosjdfksdjcviosdfjsipfj:KLdjvcisdfjK:LSdjfiposjlkdkkjfjfjfjfjfjfjfaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
-      "createdAt": "2022-01-28",
-      "likes": []
+      "firstName": "Melinda",
+      "lastName": "Gates",
+      "nickname": "Melinda1964",
+      "email": "melinda.g@gmail.com",
+      "password": "123456",
+      "againPassword": "123456",
+      "gender": "female",
+      "dataBirthday": "1964-08-15",
+      "profileImage": "https://www.un.org/sites/un2.un.org/files/melinda-gates.jpg",
+      "followers": [],
+      "following": [],
+      "id": 3
+    },
+    {
+      "firstName": "Natalie",
+      "lastName": " Portman",
+      "nickname": "Portman9",
+      "email": "portman@gmail.com",
+      "password": "123456",
+      "againPassword": "123456",
+      "gender": "female",
+      "dataBirthday": "1981-06-09",
+      "profileImage": "https://interesnyefakty.org/wp-content/uploads/interesnye-fakty-o-natali-portman.jpg",
+      "followers": [],
+      "following": [],
+      "id": 4
+    },
+    {
+      "firstName": "Vladimir",
+      "lastName": "Ghrejyan",
+      "nickname": "v.ghrejyan",
+      "email": "vladimir.ghrejyan@gmail.com",
+      "password": "123456",
+      "againPassword": "123456",
+      "gender": "male",
+      "dataBirthday": "1998-11-27",
+      "profileImage": "https://restorixhealth.com/wp-content/uploads/2018/08/No-Image.png",
+      "followers": [],
+      "following": [
+        1
+      ],
+      "id": 5
     }
-  ]
+  ],
+  "posts": []
 }
